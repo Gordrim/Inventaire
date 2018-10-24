@@ -9,15 +9,25 @@
  	Il y a une erreur dans le programme
 
     <script type="plain/text" id="page-inventaire">
-      <div class="page_inventaire">
+      <div class="page-inventaire">
         <h1>Inventaire</h1>
         <ul id="inventaire"></ul>
+      </div>
+    </script>
+
+    <script type="plain/text" id="page-objet">
+      <div class="page-objet">
+        <h1 id="nom-objet"></h1>
+        <p id="quantiter-objet"></p>
+        <p id="valeur-objet"></p>
+        <p id="description-objet"></p>
       </div>
     </script>
 
     <script src="js/Modele/Objet.js"></script>
     <script src="js/Donnee/ObjetDAO.js"></script>
     <script src="js/Vue/VueInventaire.js"></script>
+    <script src="js/Vue/VueObjet.js"></script>
     <script src="js/application.js"></script>
 
  </body>
