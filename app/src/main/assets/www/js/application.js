@@ -12,4 +12,8 @@ for(var numeroObjet in inventaireDonnees)
   li+= "<li>"+inventaireDonnees[numeroObjet]+"</li>";
 }
 
+var hacheDurandil = new Objet("Hache Durandil", 1, 20, "Parce que les épée c'est surfait");
+
+li+= "<li>"+hacheDurandil.nom+"</li>"
+
 inventaire.innerHTML = li;
