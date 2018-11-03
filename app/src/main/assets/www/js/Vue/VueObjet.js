@@ -1,16 +1,17 @@
-var VueObjet = function(objet)
+var VueObjet = (function()
 {
-
-  this.afficher = function()
-  {
     var pageObjet = document.getElementById("page-objet").innerHTML;
 
-    document.getElementsByTagName("body")[0].innerHTML = pageObjet;
+    return function(objet)
+    {
+      this.afficher = function()
+      {
+        document.getElementsByTagName("body")[0].innerHTML = pageObjet;
 
-    document.getElementById("nom-objet").innerHTML = objet.nom;
-    document.getElementById("quantiter-objet").innerHTML = objet.quantiter;
-    document.getElementById("valeur-objet").innerHTML = objet.valeur;
-    document.getElementById("description-objet").innerHTML = objet.description;
-
-  }
-}
+        document.getElementById("nom-objet").innerHTML = objet.nom;
+        document.getElementById("quantiter-objet").innerHTML = objet.quantiter;
+        document.getElementById("valeur-objet").innerHTML = objet.valeur;
+        document.getElementById("description-objet").innerHTML = objet.description;
+      }
+    };
+})();
