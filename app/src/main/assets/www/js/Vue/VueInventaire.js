@@ -14,7 +14,7 @@ var VueInventaire = function(inventaireDonnees)
 
     for(var numeroObjet in inventaireDonnees)
     {
-      li+= "<li>"+inventaireDonnees[numeroObjet].nom+"</li>";
+      li+= "<li><a href=\"#objet/"+numeroObjet+"\">"+inventaireDonnees[numeroObjet].nom+"</a></li>";
     }
 
     inventaire.innerHTML = li;
