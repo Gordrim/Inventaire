@@ -23,10 +23,9 @@
         }
         else
         {
-            var navigation = hash.match(/^#objet\/([0-9]+)/);
-            alert(navigation);
+            this.inventaireDonnees = this.objetDAO.lister();
+            var navigation = hash.match(/^#objet\/([0-9]+)/);  
             var idObjet = navigation[1];
-            alert(idObjet);
             var vueObjet = new VueObjet(instance.inventaireDonnees[idObjet]);
             vueObjet.afficher();
         }
