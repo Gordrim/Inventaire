@@ -18,7 +18,7 @@
         if(!hash)
         {
             this.inventaireDonnees = this.objetDAO.lister();
-            var vueInventaire = new VueInventaire(instance.inventaireDonnees);
+            var vueInventaire = new VueInventaire(this.inventaireDonnees);
             vueInventaire.afficher();
         }
         else if(hash.match(/^#ajouter-objet/))
@@ -39,7 +39,7 @@
 
     var actionEnregistrerObjet = function(objet)
    {
-       //this.objetDAO.ajouter(objet);
+       this.objetDAO.ajouter(objet);
        naviguerAccueil();
    }
 
