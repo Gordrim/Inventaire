@@ -24,8 +24,7 @@ var VueAjouterObjet = (function(){
             var valeur = document.getElementById("valeur-objet").value;
             var description = document.getElementById("description-objet").value;
 
-            var id = new ObjetDAO().lister().length;
-            var objet = new Objet(id, nom, quantiter, valeur, description);
+            var objet = new Objet(null, nom, quantiter, valeur, description);
 
             actionEnregistrerObjet(objet);
         }
