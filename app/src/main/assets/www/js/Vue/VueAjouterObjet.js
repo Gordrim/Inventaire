@@ -1,5 +1,5 @@
 var VueAjouterObjet = (function(){
-    var pageAjouterObjet = document.getElementById("page-ajouter-objet").innerHTML;
+    var pageAjouterObjet = document.getElementById("page-formulaire-objet").innerHTML;
 
     return function(actionEnregistrerObjet)
     {
@@ -8,7 +8,9 @@ var VueAjouterObjet = (function(){
         {
             document.getElementsByTagName("body")[0].innerHTML = pageAjouterObjet;
 
-            var formulaireAjouter = document.getElementById("formulaire-ajouter");
+            document.getElementById("titre-page").value = "Ajouter un objet";
+
+            var formulaireAjouter = document.getElementById("formulaire-objet");
             formulaireAjouter.addEventListener("submit", enregistrerObjet);
 
         }
@@ -17,12 +19,13 @@ var VueAjouterObjet = (function(){
         {
             evenement.preventDefault();
 
-            var nom = document.getElementById("nom").value;
-            var quantiter = document.getElementById("quantiter").value;
-            var valeur = document.getElementById("valeur").value;
-            var description = document.getElementById("description").value;
+            var nom = document.getElementById("nom-objet").value;
+            var quantiter = document.getElementById("quantiter-objet").value;
+            var valeur = document.getElementById("valeur-objet").value;
+            var description = document.getElementById("description-objet").value;
 
-            var objet = new Objet(nom, quantiter, valeur, description);
+            var id = new ObjetDAO().lister().length;
+            var objet = new Objet(id, nom, quantiter, valeur, description);
 
             actionEnregistrerObjet(objet);
         }

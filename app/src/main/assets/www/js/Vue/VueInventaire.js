@@ -12,10 +12,10 @@ var VueInventaire = (function()
       var inventaire = document.getElementById("inventaire");
 
       var li = "";
-      for(var numeroObjet in inventaireDonnees)
-      {
-        li+= "<li><a href=\"#objet/"+numeroObjet+"\">"+inventaireDonnees[numeroObjet].nom+"</a></li>";
-      }
+      inventaireDonnees.forEach(function(objet, index)
+        {
+          li+= "<li><a href=\"#objet/"+objet.id+"\">"+objet.nom+"</a>  <a href=\"#modifier-objet/"+objet.id+"\">Modifier</a></li>";
+        })
 
       inventaire.innerHTML = li;
     };

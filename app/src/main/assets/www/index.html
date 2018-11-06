@@ -27,31 +27,31 @@
       </div>
     </script>
 
-    <script type="plain/text" id="page-ajouter-objet">
-     <h1>Ajouter un objet</h1>
+    <script type="plain/text" id="page-formulaire-objet">
+     <h1 id="titre-page"></h1>
 	 <article id="main" class="current">
 	    <section>
-  			<form id="formulaire-ajouter">
+  			<form id="formulaire-objet">
   				<fieldset>
     				<legend>Identification de l'objet</legend>
     				<div>
-    					<label for="nom">Nom</label>
-    					<input type="text" name="nom" id="nom"/>
+    					<label for="nom-objet">Nom</label>
+    					<input type="text" name="nom-objet" id="nom-objet"/>
     				</div>
   				</fieldset>
   				<fieldset>
     				<legend>Détails sur l'objet</legend>
             <div>
-              <label for="quantiter">Quantiter</label>
-              <input type="text" name="quantiter" id="quantiter"/>
+              <label for="quantiter-objet">Quantiter</label>
+              <input type="text" name="quantiter-objet" id="quantiter-objet"/>
             </div>
             <div>
-              <label for="valeur">Valeur</label>
-              <input type="text" name="valeur" id="valeur"/>
+              <label for="valeur-objet">Valeur</label>
+              <input type="text" name="valeur-objet" id="valeur-objet"/>
             </div>
             <div>
-    					<label for="description">Description</label>
-    					<textarea name="description" id="description"></textarea>
+    					<label for="description-objet">Description</label>
+    					<textarea name="description-objet" id="description-objet"></textarea>
     				</div>
   				</fieldset>
   				<input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
@@ -66,6 +66,7 @@
     <script src="js/Vue/VueInventaire.js"></script>
     <script src="js/Vue/VueObjet.js"></script>
     <script src="js/Vue/VueAjouterObjet.js"></script>
+    <script src="js/Vue/VueModifierObjet.js"></script>
     <script src="js/application.js"></script>
 
  </body>
