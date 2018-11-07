@@ -14,7 +14,7 @@ var VueInventaire = (function()
       var li = "";
       inventaireDonnees.forEach(function(objet, index)
         {
-          li+= "<li><a href=\"#objet/"+objet.id+"\">"+objet.nom+"</a>  <a href=\"#modifier-objet/"+objet.id+"\">Modifier</a></li>";
+          li+= "<li class=\"row\"><a href=\"#objet/"+objet.id+"\" class=\"col text-light\">"+objet.nom+"</a>  <a href=\"#modifier-objet/"+objet.id+"\" class=\"btn btn-dark col\">Modifier</a></li>";
         })
 
       inventaire.innerHTML = li;

@@ -1,73 +1,80 @@
 <!DOCTYPE HTML>
 <html>
- <head>
-  <meta charset="UTF-8">
-  <title>Inventaire</title>
-  <style type="text/css">
-  </style>
- </head>
- <body>
- 	Il y a une erreur dans le programme
+<head>
+    <meta charset="UTF-8">
+    <title>Inventaire</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body class="bg-secondary">
+Il y a une erreur dans le programme
 
-    <script type="plain/text" id="page-inventaire">
+<script type="plain/text" id="page-inventaire">
       <div class="page-inventaire">
-        <h1>Inventaire</h1>
-        <ul id="inventaire"></ul>
-        <a href="#ajouter-objet">Ajouter un objet</a>
+        <h1 class="text-light">Inventaire</h1>
+        <ul id="inventaire" class="container"></ul>
+        <a href="#ajouter-objet" class="btn btn-dark">Ajouter un objet</a>
       </div>
-    </script>
 
-    <script type="plain/text" id="page-objet">
+
+</script>
+
+<script type="plain/text" id="page-objet">
       <div class="page-objet">
-        <h1 id="nom-objet"></h1>
-        <p id="quantiter-objet"></p>
-        <p id="valeur-objet"></p>
-        <p id="description-objet"></p>
-        <a href="#">Revenir à l'inventaire</a>
+        <h1 id="nom-objet" class="text-light"></h1>
+        <p id="quantiter-objet" class="text-light"></p>
+        <p id="valeur-objet" class="text-light"></p>
+        <p id="description-objet" class="text-light"></p>
+        <a href="#" class="btn btn-dark">Revenir à l'inventaire</a>
       </div>
-    </script>
 
-    <script type="plain/text" id="page-formulaire-objet">
-     <h1 id="titre-page"></h1>
+
+</script>
+
+<script type="plain/text" id="page-formulaire-objet">
+     <h1 id="titre-page" class="text-light"></h1>
 	 <article id="main" class="current">
 	    <section>
-  			<form id="formulaire-objet">
+  			<form id="formulaire-objet" class="form-group">
   				<fieldset>
-    				<legend>Identification de l'objet</legend>
+    				<legend class="text-light">Identification de l'objet</legend>
     				<div>
-    					<label for="nom-objet">Nom</label>
-    					<input type="text" name="nom-objet" id="nom-objet"/>
+    					<label for="nom-objet" class="text-light">Nom</label>
+    					<input type="text" name="nom-objet" id="nom-objet" class="form-control"/>
     				</div>
   				</fieldset>
   				<fieldset>
-    				<legend>Détails sur l'objet</legend>
+    				<legend class="text-light">Détails sur l'objet</legend>
             <div>
-              <label for="quantiter-objet">Quantiter</label>
-              <input type="text" name="quantiter-objet" id="quantiter-objet"/>
+              <label for="quantiter-objet" class="text-light">Quantiter</label>
+              <input type="text" name="quantiter-objet" id="quantiter-objet" class="form-control"/>
             </div>
             <div>
-              <label for="valeur-objet">Valeur</label>
-              <input type="text" name="valeur-objet" id="valeur-objet"/>
+              <label for="valeur-objet" class="text-light">Valeur</label>
+              <input type="text" name="valeur-objet" id="valeur-objet" class="form-control"/>
             </div>
             <div>
-    					<label for="description-objet">Description</label>
-    					<textarea name="description-objet" id="description-objet"></textarea>
+    					<label for="description-objet" class="text-light">Description</label>
+    					<textarea name="description-objet" id="description-objet" class="form-control"></textarea>
     				</div>
   				</fieldset>
-  				<input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+  				<input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer" class="btn btn-dark"/>
   			</form>
-  			<a href="#">Annuler et revenir à la liste</a>
+  			<a href="#" class="btn btn-dark" class="form-control">Annuler et revenir à la liste</a>
 	    </section>
 	  </article>
-    </script>
 
-    <script src="js/Modele/Objet.js"></script>
-    <script src="js/Donnee/ObjetDAO.js"></script>
-    <script src="js/Vue/VueInventaire.js"></script>
-    <script src="js/Vue/VueObjet.js"></script>
-    <script src="js/Vue/VueAjouterObjet.js"></script>
-    <script src="js/Vue/VueModifierObjet.js"></script>
-    <script src="js/application.js"></script>
 
- </body>
+</script>
+
+<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>
+<script src="js/Modele/Objet.js"></script>
+<script src="js/Donnee/ObjetDAO.js"></script>
+<script src="js/Vue/VueInventaire.js"></script>
+<script src="js/Vue/VueObjet.js"></script>
+<script src="js/Vue/VueAjouterObjet.js"></script>
+<script src="js/Vue/VueModifierObjet.js"></script>
+<script src="js/application.js"></script>
+
+</body>
 </html>
