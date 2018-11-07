@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body class="bg-secondary">
+<body class="bg-secondary container">
 Il y a une erreur dans le programme
 
 <script type="plain/text" id="page-inventaire">
@@ -20,11 +20,19 @@ Il y a une erreur dans le programme
 </script>
 
 <script type="plain/text" id="page-objet">
-      <div class="page-objet">
+      <div class="page-objet" class="container">
         <h1 id="nom-objet" class="text-light"></h1>
-        <p id="quantiter-objet" class="text-light"></p>
-        <p id="valeur-objet" class="text-light"></p>
+        <div class="row">
+            <p class="text-light col">Quantiter :</p>
+            <p id="quantiter-objet" class="text-light col"></p>
+        </div class="row">
+        <div class="row">
+            <p class="text-light col">Valeur :</p>
+            <p id="valeur-objet" class="text-light col"></p>
+        </div class="row">
+        <p class="text-light">Description :</p>
         <p id="description-objet" class="text-light"></p>
+
         <a href="#" class="btn btn-dark">Revenir à l'inventaire</a>
       </div>
 
